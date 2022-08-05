@@ -1,24 +1,54 @@
-# README
+## アプリケーション名
+ read-tech
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+ 3Dプリンタで作成した作品を投稿し、交流する。コメント機能で、評価や3Dモデル作成機能などの技術発信をすることで、製作意欲の刺激、技術向上を図る。
 
-Things you may want to cover:
+## URL
+ 追記予定
+ 
+ ID:admin
+ Pass:2222
+## テスト用アカウント
+ - 一人目
 
-* Ruby version
+    - メールアドレス:test1@test.com
 
-* System dependencies
+    - パスワード:111ooo
 
-* Configuration
+## 利用方法
+### 書籍登録
+ 1.トップページからユーザー新規登録を行う。
+ 
+ 2.新規登録ボタンから書籍の内容(タイトル、メンタルマップ、キュリオシティギャップ、著者の特徴)を入力し、登録する。
 
-* Database creation
+ 3.「予測」読み、「視覚化」読み、「つなげ」読み、「要するに」読み、「しつもん」読み、を入力し、登録する。
 
-* Database initialization
+## アプリケーションを作成した背景
+ 読書には読み方というものがある。それを解説している書籍の一つが「知識を操る超読書術」である。
+ この中で解説されている読み方を実践するためのアプリが欲しいと思い、作成に至った。
+ 本の内容を理解し、活用するためのアプリとして、生産性、人生の質の向上に役立てたい。
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## 洗い出した要件
+[要件を定義したシート]追記予定
 
-* Deployment instructions
+## 実装した機能についての画像やGIFおよびその説明
+ 追記予定
 
-* ...
+## データベース設計
+ 追記予定
+
+## 画面遷移図
+ 追記予定
+
+## 開発環境
+- ruby
+- html
+- css
+
+## 工夫したポイント
+ 追記予定
+
+## 今後実装したい機能
+ 追記予定
