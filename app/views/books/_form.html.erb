@@ -1,0 +1,10 @@
+<%= form_with model: prototype, local: true do |f|%>
+  <div class="field">
+    <%= f.label :book_name, "書籍のタイトル" %><br />
+    <%= f.text_field :book_name, id:"prototype_title" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
