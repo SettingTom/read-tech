@@ -1,6 +1,5 @@
 <div class="card">
   <div class="card__body">
     <%= link_to book.book_name, books_path(book.id), method: :get, class: :card__title%>
-    <%= link_to book.user.user_name, user_session_path(book.user.id), class: :card__user %>
   </div>
 </div>
