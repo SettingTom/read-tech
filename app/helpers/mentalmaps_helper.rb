@@ -1,0 +1,2 @@
+module MentalmapsHelper
+end
