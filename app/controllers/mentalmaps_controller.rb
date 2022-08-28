@@ -1,4 +1,8 @@
 class MentalmapsController < ApplicationController
+  def new
+    @mentalmap = Mentalmap.new
+  end
+
   def create
     if Mentalmap.create(mentalmap_params)
       redirect_to book_path(params[:book_id])
