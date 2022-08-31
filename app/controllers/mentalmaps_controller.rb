@@ -1,20 +1,17 @@
 class MentalmapsController < ApplicationController
-  # def new
-  #   @mentalmap = Mentalmap.new
-  # end
+  def new
+    @mentalmap = Mentalmap.new
+    @book = Book.find(params[:book_id])
+  end
 
   def create
-    # @mentalmap = Mentalmap.new(mentalmap_params)
-    if Mentalmap.create(mentalmap_params)
-      redirect_to product_path(params[:book_id])
+    @mentalmap = Mentalmap.new(mentalmap_params)
+    if @mentalmap.save
+      # redirect_to book_path(params[:book_id])
+      redirect_to root_path
     else
-      render product_path(params[:book_id])
+      render :new
     end
-    # if @mentalmap.save
-    #   redirect_to book_path(params[:book_id])
-    # else
-    #   render book_path(params[:book_id])
-    # end
   end
 
   private
