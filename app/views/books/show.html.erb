@@ -5,7 +5,7 @@
         <%= @book.book_name%>
       </p>
 
-<%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(:book_id), class: :nav__btn %>
+<%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
 
       <%# <div class="prototype__body"> %>
         <%# <div class="prototype__detail"> %>
