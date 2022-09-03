@@ -5,8 +5,7 @@
         <%= @book.book_name%>
       </p>
 
-       <%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
-
+<% if @mentalmaps.exists? %>
       <div class="prototype__body">
         <div class="prototype__detail">
           <p class="detail__title">メンタルマップ</p>
@@ -26,7 +25,10 @@
             </ul>
           </p>
         </div>
-      </div>
+      </div>      
+<% else %>
+      <%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
+ <% end %>
 
     </div>
   </div>
