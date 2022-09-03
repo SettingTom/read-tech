@@ -12,8 +12,7 @@ class MentalmapsController < ApplicationController
   def create
     @mentalmap = Mentalmap.new(mentalmap_params)
     if @mentalmap.save
-      # redirect_to book_path(params[:book_id])
-      redirect_to root_path
+      redirect_to book_path(params[:book_id])
     else
       render :new
     end
