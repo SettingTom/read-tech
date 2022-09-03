@@ -19,6 +19,9 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @mentalmap = Mentalmap.new
+    # @mentalmap = Mentalmap.where(book_id:params[:book_id])
+    # @mentalmap = Mentalmap.all
+    @mentalmaps = @book.mentalmaps
   end
 
   private

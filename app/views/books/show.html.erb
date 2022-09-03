@@ -5,16 +5,28 @@
         <%= @book.book_name%>
       </p>
 
-<%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
+       <%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
 
-      <%# <div class="prototype__body"> %>
-        <%# <div class="prototype__detail"> %>
-          <%# <p class="detail__title">キャッチコピー</p> %>
-          <%# <p class="detail__message"> %>
-            <%# <%= @book.catch_copy %>
-          <%# </p> %>
-        <%# </div> %>
-      <%# </div> %>
+      <div class="prototype__body">
+        <div class="prototype__detail">
+          <p class="detail__title">メンタルマップ</p>
+          <p class="detail__message">
+            <ul class="comments_lists">
+              <% @mentalmaps.each do |mentalmap| %>
+                <li class="comments_list">
+                  <%= mentalmap.why_text %>
+                </li>
+                <li class="comments_list">
+                  <%= mentalmap.what_text %>
+                </li>
+                <li class="comments_list">
+                  <%= mentalmap.how_text %>
+                </li>
+              <% end %>
+            </ul>
+          </p>
+        </div>
+      </div>
 
     </div>
   </div>
