@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root to: "books#index"
   resources :users, only: [:show]
   resources :books, only: [:index, :new, :create, :show] do
-    resource :mentalmaps, only: [:index, :new, :create]
+    resource :mentalmaps, only: [:new, :create]
   end
 end

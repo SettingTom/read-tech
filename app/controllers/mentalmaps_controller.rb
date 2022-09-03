@@ -1,9 +1,4 @@
 class MentalmapsController < ApplicationController
-  def index
-    @mentalmap = Mentalmap.where(book_id:params[:book_id])
-    @book = Book.find(params[:book_id])
-  end
-
   def new
     @mentalmap = Mentalmap.new
     @book = Book.find(params[:book_id])
