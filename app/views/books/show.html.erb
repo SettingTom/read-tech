@@ -13,12 +13,15 @@
             <ul class="comments_lists">
               <% @mentalmaps.each do |mentalmap| %>
                 <li class="comments_list">
+                  <p>なぜ、この本を読もうと思ったのか?</p>
                   <%= mentalmap.why_text %>
                 </li>
                 <li class="comments_list">
+                  <p>この本から何を得たいか?</p>
                   <%= mentalmap.what_text %>
                 </li>
                 <li class="comments_list">
+                  <p>読んだ後、どういう状態になりたいと願っているのか?</p>
                   <%= mentalmap.how_text %>
                 </li>
               <% end %>
