@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_131310) do
+ActiveRecord::Schema.define(version: 2022_09_04_224748) do
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "book_name", null: false
@@ -18,6 +18,15 @@ ActiveRecord::Schema.define(version: 2022_08_27_131310) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_books_on_user_id"
+  end
+
+  create_table "curiosity_gaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "already_text"
+    t.text "unknown_text"
+    t.bigint "book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_curiosity_gaps_on_book_id"
   end
 
   create_table "mentalmaps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -44,5 +53,6 @@ ActiveRecord::Schema.define(version: 2022_08_27_131310) do
   end
 
   add_foreign_key "books", "users"
+  add_foreign_key "curiosity_gaps", "books"
   add_foreign_key "mentalmaps", "books"
 end
