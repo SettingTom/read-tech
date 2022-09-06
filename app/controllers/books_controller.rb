@@ -20,6 +20,8 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @mentalmap = Mentalmap.new
     @mentalmaps = @book.mentalmaps
+    @quriosity_gap = QuriosityGap.new
+    @quriosity_gaps = @book.quriosity_gaps
   end
 
   private
