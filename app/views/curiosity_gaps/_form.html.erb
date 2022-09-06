@@ -1,0 +1,15 @@
+<%= form_with url: book_quriosity_gaps_url, local: true do |f|%>
+  <div class="field">
+    <%= f.label :already_text , "既に知っていること" %><br />
+    <%= f.text_field :already_text , id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unknown_text, "新たに知ったこと" %><br />
+    <%= f.text_field :unknown_text, id:"prototype_title" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
