@@ -1,0 +1,2 @@
+class CuriosityGapsController < ApplicationController
+end

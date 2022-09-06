@@ -1,0 +1,2 @@
+module CuriosityGapsHelper
+end
