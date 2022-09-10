@@ -5,33 +5,57 @@
         <%= @book.book_name%>
       </p>
 
-<% if @mentalmaps.exists? %>
-      <div class="prototype__body">
-        <div class="prototype__detail">
-          <p class="detail__title">メンタルマップ</p>
-          <p class="detail__message">
-            <ul class="comments_lists">
-              <% @mentalmaps.each do |mentalmap| %>
-                <li class="comments_list">
-                  <p>なぜ、この本を読もうと思ったのか?</p>
-                  <%= mentalmap.why_text %>
-                </li>
-                <li class="comments_list">
-                  <p>この本から何を得たいか?</p>
-                  <%= mentalmap.what_text %>
-                </li>
-                <li class="comments_list">
-                  <p>読んだ後、どういう状態になりたいと願っているのか?</p>
-                  <%= mentalmap.how_text %>
-                </li>
-              <% end %>
-            </ul>
-          </p>
-        </div>
-      </div>      
-<% else %>
-      <%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
- <% end %>
+      <% if @mentalmaps.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">メンタルマップ</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @mentalmaps.each do |mentalmap| %>
+                  <li class="comments_list">
+                    <p>なぜ、この本を読もうと思ったのか?</p>
+                    <%= mentalmap.why_text %>
+                  </li>
+                  <li class="comments_list">
+                    <p>この本から何を得たいか?</p>
+                    <%= mentalmap.what_text %>
+                  </li>
+                  <li class="comments_list">
+                    <p>読んだ後、どういう状態になりたいと願っているのか?</p>
+                    <%= mentalmap.how_text %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>      
+      <% else %>
+        <%= link_to "メンタルマップを作成する", new_book_mentalmaps_path(params[:id]), class: :nav__btn %>
+      <% end %>
+
+      <% if @curiosity_gaps.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">キュリオシティ・ギャップ</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @curiosity_gaps.each do |curiosity_gap| %>
+                  <li class="comments_list">
+                    <p>なぜ、この本を読もうと思ったのか?</p>
+                    <%= curiosity_gap.already_text %>
+                  </li>
+                  <li class="comments_list">
+                    <p>この本から何を得たいか?</p>
+                    <%= curiosity_gap.unknown_text %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>      
+      <% else %>
+        <%= link_to "キュリオシティ・ギャップを作成する", new_book_curiosity_gaps_path(params[:id]), class: :nav__btn %>
+      <% end %>
 
     </div>
   </div>
