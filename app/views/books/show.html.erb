@@ -57,6 +57,31 @@
         <%= link_to "キュリオシティ・ギャップを作成する", new_book_curiosity_gaps_path(params[:id]), class: :nav__btn %>
       <% end %>
 
+        <% if @resumes.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">目次チェック</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @resumes.each do |resume| %>
+                  <li class="comments_list">
+                    <p>気になった「章タイトル」や「見出し」は?</p>
+                    <%= resume.resume_chapter %>
+                  </li>
+                  <li class="comments_list">
+                    <p>気になった理由は?</p>
+                    <%= resume.resume_motive_text %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "目次チェック", new_book_resume_path(params[:id]), class: :nav__btn %>
+      <% end %>
+
+
     </div>
   </div>
 </main>

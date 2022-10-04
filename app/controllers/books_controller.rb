@@ -22,6 +22,8 @@ class BooksController < ApplicationController
     @mentalmaps = @book.mentalmaps
     @curiosity_gap = CuriosityGap.new
     @curiosity_gaps = @book.curiosity_gaps
+    @resume = Resume.new
+    @resumes = @book.resumes
   end
 
   private
