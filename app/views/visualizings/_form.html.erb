@@ -1,0 +1,21 @@
+<%= form_with url: book_visualizings_url, local: true do |f|%>
+  <p>役立つと感じた内容をビジュアル化しましょう。</p>
+  <div class="field">
+    <%= f.label :premise , "前提は?" %><br />
+    <%= f.text_field :premise , id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :explanation, "解説は?" %><br />
+    <%= f.text_field :explanation, id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :conclusion, "結論は?" %><br />
+    <%= f.text_field :conclusion, id:"prototype_title" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

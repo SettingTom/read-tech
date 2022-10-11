@@ -24,6 +24,8 @@ class BooksController < ApplicationController
     @curiosity_gaps = @book.curiosity_gaps
     @resume = Resume.new
     @resumes = @book.resumes
+    @visualizing = Visualizing.new
+    @visualizings = @book.visualizings
   end
 
   private

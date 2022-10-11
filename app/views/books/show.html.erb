@@ -81,6 +81,33 @@
         <%= link_to "目次チェック", new_book_resume_path(params[:id]), class: :nav__btn %>
       <% end %>
 
+        <% if @visualizings.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">視覚化読み</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @visualizings.each do |visualizing| %>
+                  <li class="comments_list">
+                    <p>前提</p>
+                    <%= visualizing.premise %>
+                  </li>
+                  <li class="comments_list">
+                    <p>解説</p>
+                    <%= visualizing.explanation %>
+                  </li>
+                  <li class="comments_list">
+                    <p>解説</p>
+                    <%= visualizing.conclusion %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "視覚化読み", new_book_visualizing_path(params[:id]), class: :nav__btn %>
+      <% end %>
 
     </div>
   </div>

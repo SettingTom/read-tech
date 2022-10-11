@@ -5,7 +5,7 @@ class VisualizingsController < ApplicationController
   end
 
   def create
-    @visualizing = Vvisualizing.new(visualizing_params)
+    @visualizing = Visualizing.new(visualizing_params)
     if @visualizing.save
       redirect_to book_path(params[:book_id])
     else
