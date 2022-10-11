@@ -1,0 +1,2 @@
+class Visualizing < ApplicationRecord
+end
