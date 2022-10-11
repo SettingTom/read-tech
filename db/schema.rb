@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_20_130013) do
+ActiveRecord::Schema.define(version: 2022_10_11_025423) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "author_name"
@@ -69,8 +69,19 @@ ActiveRecord::Schema.define(version: 2022_09_20_130013) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "visualizings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "premise"
+    t.text "explanation"
+    t.text "conclusion"
+    t.bigint "book_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["book_id"], name: "index_visualizings_on_book_id"
+  end
+
   add_foreign_key "books", "users"
   add_foreign_key "curiosity_gaps", "books"
   add_foreign_key "mentalmaps", "books"
   add_foreign_key "resumes", "books"
+  add_foreign_key "visualizings", "books"
 end
