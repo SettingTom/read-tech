@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resource  :mentalmaps    , only: [:new, :create]
     resource  :curiosity_gaps, only: [:new, :create]
     resources :resumes       , only: [:new, :create]
+    resources :visualizings  , only: [:new, :create]
   end
 end
