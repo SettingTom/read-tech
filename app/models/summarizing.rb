@@ -1,0 +1,2 @@
+class Summarizing < ApplicationRecord
+end
