@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resource  :curiosity_gaps, only: [:new, :create]
     resources :resumes       , only: [:new, :create]
     resources :visualizings  , only: [:new, :create]
+    resources :summarizings  , only: [:new, :create]
   end
 end
