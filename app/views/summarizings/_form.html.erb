@@ -1,0 +1,16 @@
+<%= form_with url: book_summarizings_url, local: true do |f|%>
+  <p>じっくり読むのではなく、各章を拾い読みし、ほんの1行で感想を交えながら要約化しましょう。</p>
+  <div class="field">
+    <%= f.label :summarizing_chapter , "どの章を要約化しますか?" %><br />
+    <%= f.text_field :summarizing_chapter , id:"prototype_title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :summarizing_text, "要するにどんな内容ですか?" %><br />
+    <%= f.text_field :summarizing_text, id:"prototype_title" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
