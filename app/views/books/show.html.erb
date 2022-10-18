@@ -109,6 +109,25 @@
         <%= link_to "視覚化読み", new_book_visualizing_path(params[:id]), class: :nav__btn %>
       <% end %>
 
+        <% if @summarizings.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">要するに読み</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @summarizings.each do |summarizing| %>
+                  <li class="comments_list">
+                    <%= summarizing.summarizing_chapter %>は要するに、<%= summarizing.summarizing_text %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "要するに読み", new_book_summarizing_path(params[:id]), class: :nav__btn %>
+      <% end %>
+
     </div>
   </div>
 </main>

@@ -26,6 +26,8 @@ class BooksController < ApplicationController
     @resumes = @book.resumes
     @visualizing = Visualizing.new
     @visualizings = @book.visualizings
+    @summarizing = Summarizing.new
+    @summarizings = @book.summarizings
   end
 
   private
