@@ -1,0 +1,2 @@
+class Questioning < ApplicationRecord
+end
