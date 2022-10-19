@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_13_030703) do
+ActiveRecord::Schema.define(version: 2022_10_19_134256) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "author_name"
@@ -45,6 +45,27 @@ ActiveRecord::Schema.define(version: 2022_10_13_030703) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["book_id"], name: "index_mentalmaps_on_book_id"
+  end
+
+  create_table "questionings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "answer1"
+    t.text "answer2"
+    t.text "answer3"
+    t.text "answer4"
+    t.text "answer5"
+    t.text "answer6"
+    t.text "answer7"
+    t.text "answer8"
+    t.text "answer9"
+    t.text "answer10"
+    t.text "answer12"
+    t.text "answer13"
+    t.text "answer14"
+    t.text "answer15"
+    t.text "answer16"
+    t.text "answer17"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "resumes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
