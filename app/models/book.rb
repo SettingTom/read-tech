@@ -7,5 +7,5 @@ class Book < ApplicationRecord
   has_many :resumes
   has_many :visualizings
   has_many :summarizings
-  has_many :questions
+  has_many :questionings
 end
