@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :resumes       , only: [:new, :create]
     resources :visualizings  , only: [:new, :create]
     resources :summarizings  , only: [:new, :create]
+    resources :questionings  , only: [:new, :create]
   end
 end
