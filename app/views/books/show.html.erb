@@ -128,6 +128,26 @@
         <%= link_to "要するに読み", new_book_summarizing_path(params[:id]), class: :nav__btn %>
       <% end %>
 
+        <% if @questionings.exists? %>
+        <div class="prototype__body">
+          <div class="prototype__detail">
+            <p class="detail__title">質問読み</p>
+            <p class="detail__message">
+              <ul class="comments_lists">
+                <% @questionings.each do |questioning| %>
+                  <li class="comments_list">
+                    <p>質問</p>
+                    <%= questioning.answer1 %>
+                  </li>
+                <% end %>
+              </ul>
+            </p>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "質問読み", new_book_questioning_path(params[:id]), class: :nav__btn %>
+      <% end %>
+
     </div>
   </div>
 </main>

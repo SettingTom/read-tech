@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_19_134256) do
+ActiveRecord::Schema.define(version: 2022_10_25_140406) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "author_name"
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 2022_10_19_134256) do
     t.text "answer17"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "book_id", null: false
+    t.index ["book_id"], name: "index_questionings_on_book_id"
   end
 
   create_table "resumes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -112,6 +114,7 @@ ActiveRecord::Schema.define(version: 2022_10_19_134256) do
   add_foreign_key "books", "users"
   add_foreign_key "curiosity_gaps", "books"
   add_foreign_key "mentalmaps", "books"
+  add_foreign_key "questionings", "books"
   add_foreign_key "resumes", "books"
   add_foreign_key "summarizings", "books"
   add_foreign_key "visualizings", "books"

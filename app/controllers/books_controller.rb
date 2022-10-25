@@ -28,6 +28,8 @@ class BooksController < ApplicationController
     @visualizings = @book.visualizings
     @summarizing = Summarizing.new
     @summarizings = @book.summarizings
+    @questioning = Questioning.new
+    @questionings = @book.questionings
   end
 
   private
