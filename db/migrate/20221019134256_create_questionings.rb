@@ -11,12 +11,14 @@ class CreateQuestionings < ActiveRecord::Migration[6.0]
       t.text       :answer8
       t.text       :answer9
       t.text       :answer10
+      t.text       :answer11
       t.text       :answer12
       t.text       :answer13
       t.text       :answer14
       t.text       :answer15
       t.text       :answer16
       t.text       :answer17
+      t.references :book     , null: false, foreign_key: true
       t.timestamps
     end
   end

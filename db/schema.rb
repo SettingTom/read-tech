@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_25_140406) do
+ActiveRecord::Schema.define(version: 2022_10_19_134256) do
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "author_name"
@@ -58,15 +58,16 @@ ActiveRecord::Schema.define(version: 2022_10_25_140406) do
     t.text "answer8"
     t.text "answer9"
     t.text "answer10"
+    t.text "answer11"
     t.text "answer12"
     t.text "answer13"
     t.text "answer14"
     t.text "answer15"
     t.text "answer16"
     t.text "answer17"
+    t.bigint "book_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "book_id", null: false
     t.index ["book_id"], name: "index_questionings_on_book_id"
   end
 
