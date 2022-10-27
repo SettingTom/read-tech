@@ -1,17 +1,17 @@
 <%= form_with url: book_mentalmaps_url, local: true do |f|%>
   <div class="field">
     <%= f.label :why_text , "なぜ、この本を読もうと思ったのか?" %><br />
-    <%= f.text_field :why_text , id:"prototype_title" %>
+    <%= f.text_area :why_text , id:"prototype_title" ,:size=>"40x2"%>
   </div>
 
   <div class="field">
     <%= f.label :what_text, "この本から何を得たいか?" %><br />
-    <%= f.text_field :what_text, id:"prototype_title" %>
+    <%= f.text_area :what_text, id:"prototype_title" ,:size=>"40x2"%>
   </div>
 
   <div class="field">
     <%= f.label :how_text, "読んだ後、どういう状態になりたいと願っているのか?" %><br />
-    <%= f.text_field :how_text, id:"prototype_title" %>
+    <%= f.text_area :how_text, id:"prototype_title" ,:size=>"40x2"%>
   </div>
 
   <div class="actions">
