@@ -2,12 +2,12 @@
   <p>目次から興味を引く「章タイトル」や「見出し」を探してみましょう。</p>
   <div class="field">
     <%= f.label :resume_chapter , "気になった「章タイトル」や「見出し」は?" %><br />
-    <%= f.text_field :resume_chapter , id:"prototype_title" %>
+    <%= f.text_field :resume_chapter , id:"prototype_title" ,:size=>"40"%>
   </div>
 
   <div class="field">
     <%= f.label :resume_motive_text, "気になった理由は?" %><br />
-    <%= f.text_field :resume_motive_text, id:"prototype_title" %>
+    <%= f.text_area :resume_motive_text, id:"prototype_title" ,:size=>"40x2"%>
   </div>
 
   <div class="actions">
