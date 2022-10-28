@@ -2,17 +2,17 @@
   <p>役立つと感じた内容をビジュアル化しましょう。</p>
   <div class="field">
     <%= f.label :premise , "前提は?" %><br />
-    <%= f.text_field :premise, placeholder: '自分が本に求めていた目的を「前提」としましょう', id:"prototype_title" %>
+    <%= f.text_area :premise, placeholder: '自分が本に求めていた目的を「前提」としましょう', id:"prototype_title" ,:size=>"50x2"%>
   </div>
 
   <div class="field">
     <%= f.label :explanation, "解説は?" %><br />
-    <%= f.text_field :explanation, placeholder: '読んだ内容に含まれていた役立つ情報を「解説」としましょう', id:"prototype_title" %>
+    <%= f.text_area :explanation, placeholder: '読んだ内容に含まれていた役立つ情報を「解説」としましょう', id:"prototype_title" ,:size=>"50x6"%>
   </div>
 
   <div class="field">
     <%= f.label :conclusion, "結論は?" %><br />
-    <%= f.text_field :conclusion, placeholder: '誰かに話す状況を想定しながら「結論」として要約しましょう', id:"prototype_title" %>
+    <%= f.text_area :conclusion, placeholder: '誰かに話す状況を想定しながら「結論」として要約しましょう', id:"prototype_title" ,:size=>"50x4"%>
   </div>
 
   <div class="actions">
