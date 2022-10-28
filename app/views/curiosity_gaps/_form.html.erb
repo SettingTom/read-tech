@@ -1,12 +1,12 @@
 <%= form_with url: book_curiosity_gaps_url, local: true do |f|%>
   <div class="field">
     <%= f.label :already_text , "自分が既に知っている知識" %><br />
-    <%= f.text_field :already_text , id:"prototype_title" %>
+    <%= f.text_area :already_text , id:"prototype_title" ,:size=>"50x10"%>
   </div>
 
   <div class="field">
     <%= f.label :unknown_text, "目次をスキミングをし興味関心が刺激された見出し 興味が湧いた知らないこと" %><br />
-    <%= f.text_field :unknown_text, id:"prototype_title" %>
+    <%= f.text_area :unknown_text, id:"prototype_title" ,:size=>"50x10"%>
   </div>
 
   <div class="actions">
